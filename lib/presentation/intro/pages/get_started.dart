@@ -14,8 +14,8 @@ class GetStartedPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
                 image: AssetImage(AppImages.introBG),
@@ -25,15 +25,15 @@ class GetStartedPage extends StatelessWidget {
 
           Container(color: Colors.black.withAlpha((0.15 * 255).round())),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
             child: Column(
               children: [
                 Align(
                   alignment: Alignment.center,
                   child: SvgPicture.asset(AppVectors.logo),
                 ),
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   'Enjoy Listening To Music',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -41,8 +41,8 @@ class GetStartedPage extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(height: 21),
-                Text(
+                const SizedBox(height: 21),
+                const Text(
                   'Discover and enjoy millions of songs for free. No credit card required—just press play and start listening on',
                   style: TextStyle(
                     color: Colors.white,
@@ -51,7 +51,7 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 BasicAppButton(
                   onPressed: () {
                     Navigator.push(
