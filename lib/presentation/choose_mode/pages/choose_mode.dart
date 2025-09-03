@@ -7,6 +7,7 @@ import 'package:spotify_clone_app/common/widgets/button/basic_app_button.dart';
 import 'package:spotify_clone_app/core/configs/assets/app_images.dart';
 import 'package:spotify_clone_app/core/configs/assets/app_vectors.dart';
 import 'package:spotify_clone_app/core/configs/theme/app_colors.dart';
+import 'package:spotify_clone_app/presentation/auth/page/signup_or_signin.dart';
 import 'package:spotify_clone_app/presentation/choose_mode/bloc/theme_cubit.dart';
 
 class ChooseModePage extends StatelessWidget {
@@ -18,8 +19,8 @@ class ChooseModePage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
                 image: AssetImage(AppImages.chooseModelBG),
@@ -29,15 +30,15 @@ class ChooseModePage extends StatelessWidget {
 
           Container(color: Colors.black.withAlpha((0.15 * 255).round())),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
             child: Column(
               children: [
                 Align(
                   alignment: Alignment.center,
                   child: SvgPicture.asset(AppVectors.logo),
                 ),
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   'Choose Mode',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -77,8 +78,8 @@ class ChooseModePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 15),
-                        Text(
+                        const SizedBox(height: 15),
+                        const Text(
                           'Dark Mode',
                           style: TextStyle(
                             color: AppColors.grey,
@@ -88,7 +89,7 @@ class ChooseModePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(width: 40),
+                    const SizedBox(width: 40),
                     Column(
                       children: [
                         GestureDetector(
@@ -117,8 +118,8 @@ class ChooseModePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 15),
-                        Text(
+                        const SizedBox(height: 15),
+                        const Text(
                           'Light Mode',
                           style: TextStyle(
                             color: AppColors.grey,
@@ -137,7 +138,7 @@ class ChooseModePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const ChooseModePage(),
+                            const SignupOrSigninPage(),
                       ),
                     );
                   },
